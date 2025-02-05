@@ -1,0 +1,643 @@
+:root {
+    --primary: #2A5C82;  /* Professional blue */
+    --secondary: #FF6B6B; /* Accent color */
+}
+
+.hero {
+    background: url('images/Backlogo.png') center,
+    linear-gradient(rgba(96, 175, 235, 0.9), rgba(42,92,130,0.9)) ;
+    height: 85vh;
+    background-size: 100% 100%;            
+}
+.box h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+.box {
+    margin-top: 200px; 
+}
+
+/* ===============================================
+   Hero Section - Aesthetic Enhancements
+   =============================================== */
+   
+  
+  /* Button Styling within Hero */
+  .hero a.btn {
+    background: #04b93b;
+    color: #f9fafa;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 14px #050000;
+  }
+  
+  /* Button Hover Effect */
+  .hero a.btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+    color: #4A90E2;
+  }
+  
+body{
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+}
+
+/* ===============================================
+   Mentor Grid Section - Aesthetic Enhancements
+   =============================================== */
+   #mentors {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  }
+  
+  #mentors h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2A5C82; /* Professional blue */
+    margin-bottom: 40px;
+    margin-top: 50px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mentor Card Styling */
+  #mentorContainer .mentor-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+  }
+  
+  #mentorContainer .mentor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Mentor Image Styling */
+  #mentorContainer .mentor-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Card Body Styling */
+  #mentorContainer .mentor-card .card-body {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #mentorContainer .mentor-card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  #mentorContainer .mentor-card .text-muted {
+    font-size: 1rem;
+    color: #888;
+  }
+  
+  #mentorContainer .mentor-card .text-primary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #4A90E2;
+  }
+
+  
+  /* ===============================================
+   Navbar Section - Aesthetic Enhancements
+   =============================================== */
+.navbar {
+    background: #fff; /* Clean white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  /* Navbar Brand (Logo and Title) */
+  .navbar-brand {
+    font-weight: bold;
+    color: #2A5C82 !important; /* Professional blue */
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand img {
+    margin-right: 8px;
+    border-radius: 5px;
+  }
+  
+  /* Navbar Brand Hover Effect */
+  .navbar-brand:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    color: #2A5C82 !important;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Navbar Links Hover Effect */
+  .navbar-nav .nav-link:hover {
+    color: #4A90E2 !important; /* Brighter blue on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Navbar Toggler for Mobile */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+.nav-item{
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+/* Base styles for the button */
+.nav-link.call-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 11px;
+    margin-left: 8px;
+    margin-top: 6px;
+    border-radius: 25px; /* Oval shape */
+    background-color: #04b93b; /* Default background color */
+    color: #fff !important; /* Text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Arrow styling */
+  .nav-link.call-btn .arrow {
+    margin-left: 8px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .nav-link.call-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Arrow animation on hover */
+  .nav-link.call-btn:hover .arrow {
+    transform: translateX(5px); /* Move arrow to the right */
+  }
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+  }
+  
+  .marquee-content img {
+    height: 50px;
+    margin-right: 50px;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+  }
+/* styles.css */
+.registration {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 60px 20px;
+    margin-bottom: 100px;
+    scroll-margin-top: 80px;
+   
+}
+
+
+/* ===============================================
+   Registration Form Section - Aesthetic Enhancements
+   =============================================== */
+
+  .form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Form heading styling */
+  .form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Form group: Spacing and left alignment for labels */
+  .form-group {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  /* Input & textarea fields styling */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus state for inputs to highlight the field */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #4A90E2;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .register-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #04b93b;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  /* Hover effect for submit button */
+ .register-submit:hover {
+    background-color: #3a7ac9;
+  }
+  
+
+#faq{
+    scroll-margin-top: 100px;
+}
+/* FAQ Section Styling */
+.faq-section {
+    
+    margin: 0 auto; 
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  font-weight: bold;
+  color: #2A5C82; /* Professional blue */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+   
+} 
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-radius: 5px;
+}
+
+
+.faq-question:hover {
+  background-color: #e0f7fa; 
+}
+
+.faq-question span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.faq-question .arrow {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+  color: #2A5C82;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #fff;
+}
+
+.faq-answer p {
+  padding: 0 15px 15px;
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Active state for FAQ item */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust based on content */
+    padding: 10px 15px;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+.faq-question span:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+  
+
+/* ===============================================
+   How It Works Section - Aesthetic Enhancements
+   =============================================== */
+   #how-it-works {
+    padding: 60px 0;
+  }
+  
+  #how-it-works h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2A5C82; /* Professional blue */
+    margin-bottom: 40px;
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the individual cards inside the How It Works section */
+  #how-it-works .col-md-4 > div {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #how-it-works .col-md-4 > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Enhance the icons to make them pop */
+  #how-it-works i {
+    color: #4A90E2; /* A bright, modern blue */
+    margin-bottom: 20px;
+  }
+  
+  /* Update the step titles */
+  #how-it-works h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Improve the description text */
+  #how-it-works p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .howitworks-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+  }
+  
+  /* Ensure each column is a flex container so that its child can stretch */
+.howitworks-cards > .col-md-4 {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  /* Force the inner card to fill the available height and arrange content vertically */
+  .howitworks-cards .col-md-4 > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ===============================================
+   Our Founders Section - Aesthetic Enhancements
+   =============================================== */
+#our-founders {
+    padding: 60px 0;
+  }
+  
+  #our-founders h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2A5C82; /* Professional blue */
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Founder Card Styling */
+  .founder-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 80px; /* Ensures spacing on smaller screens */
+    text-align: center;
+  }
+  
+  .founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Founder Photo Styling - Square Image */
+  .founder-photo {
+    border-radius: 0;       /* Removes the circular shape */
+    width: 250px;           /* Adjust size as needed */
+    height: 250px;          /* Adjust size as needed */
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  /* Footer */
+
+
+footer {
+  margin-top: 110px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+  margin-left: 95px;
+}
+
+.footer-column h3 {
+  color: #f1c40f;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-column .social-icons a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-column .social-icons a:hover {
+  color: #f1c40f;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-column {
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  .footer-column ul {
+      padding-left: 0;
+  }
+
+  .footer-column .social-icons {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+      min-width: 100%;
+  }
+
+  .footer-column h3 {
+      font-size: 18px;
+  }
+
+  .footer-column p, .footer-column ul li a {
+      font-size: 12px;
+  }
+
+  .footer-column .social-icons a {
+      font-size: 18px;
+  }
+}

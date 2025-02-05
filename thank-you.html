@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f8cdda, #1d2b64);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .thank-you-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .thank-you-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h1 {
+      color: #4caf50;
+      font-size: 32px;
+      margin: 0;
+    }
+    .dotlottie-player {
+      width: 50px;
+      height: 50px;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-container">
+    <div class="thank-you-header">
+      <h1>Thank You!</h1>
+      <dotlottie-player
+        class="dotlottie-player"
+        src="https://lottie.host/322dcfa9-ac1f-438a-8a42-ecedc434c21c/ajcZ42cVWF.lottie"
+        background="transparent"
+        speed="0.8"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+    <p>We have received your registration. You will be contacted shortly.</p>
+  </div>
+
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+    type="module"
+  ></script>
+</body>
+</html>
