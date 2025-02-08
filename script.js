@@ -1,102 +1,102 @@
 // Mock Mentor Data (replace with Firebase later)
-const mentors = [
-    {
-        name: "Anika Sharma",
-        university: "Stanford University",
-        course: "MS Computer Science",
-        price: 1500,
-        photo: "CEO.png",
+// const mentors = [
+//     {
+//         name: "Anika Sharma",
+//         university: "Stanford University",
+//         course: "MS Computer Science",
+//         price: 1500,
+//         photo: "CEO.png",
     
-    },
-    {
-        name: "Rahul Verma",
-        university: "MIT",
-        course: "MBA",
-        price: 2000,
-        photo: "assets/mentor2.jpg",
+//     },
+//     {
+//         name: "Rahul Verma",
+//         university: "MIT",
+//         course: "MBA",
+//         price: 2000,
+//         photo: "assets/mentor2.jpg",
        
-    },
-    {
-        name: "Priya Patel",
-        university: "Harvard University",
-        course: "PhD Neuroscience",
-        price: 1800,
-        photo: "assets/mentor3.jpg",
+//     },
+//     {
+//         name: "Priya Patel",
+//         university: "Harvard University",
+//         course: "PhD Neuroscience",
+//         price: 1800,
+//         photo: "assets/mentor3.jpg",
        
-    },
-    {
-        name: "Arjun Singh",
-        university: "University of Toronto",
-        course: "BSc Computer Engineering",
-        price: 1200,
-        photo: "assets/mentor4.jpg",
+//     },
+//     {
+//         name: "Arjun Singh",
+//         university: "University of Toronto",
+//         course: "BSc Computer Engineering",
+//         price: 1200,
+//         photo: "assets/mentor4.jpg",
        
-    },
-    {
-        name: "Neha Gupta",
-        university: "ETH Zurich",
-        course: "Masters in Robotics",
-        price: 1700,
-        photo: "assets/mentor5.jpg",
+//     },
+//     {
+//         name: "Neha Gupta",
+//         university: "ETH Zurich",
+//         course: "Masters in Robotics",
+//         price: 1700,
+//         photo: "assets/mentor5.jpg",
        
-    },
-    {
-        name: "Siddharth Rao",
-        university: "University of Cambridge",
-        course: "MA Economics",
-        price: 1900,
-        photo: "assets/mentor6.jpg",
+//     },
+//     {
+//         name: "Siddharth Rao",
+//         university: "University of Cambridge",
+//         course: "MA Economics",
+//         price: 1900,
+//         photo: "assets/mentor6.jpg",
        
-    },
-    {
-        name: "Meera Desai",
-        university: "University of Melbourne",
-        course: "BArch",
-        price: 1400,
-        photo: "assets/mentor7.jpg",
+//     },
+//     {
+//         name: "Meera Desai",
+//         university: "University of Melbourne",
+//         course: "BArch",
+//         price: 1400,
+//         photo: "assets/mentor7.jpg",
      
-    },
-    {
-        name: "Vikram Joshi",
-        university: "Imperial College London",
-        course: "MSc Data Science",
-        price: 2100,
-        photo: "assets/mentor8.jpg",
+//     },
+//     {
+//         name: "Vikram Joshi",
+//         university: "Imperial College London",
+//         course: "MSc Data Science",
+//         price: 2100,
+//         photo: "assets/mentor8.jpg",
       
-    },
-    {
-        name: "Ananya Reddy",
-        university: "University of Chicago",
-        course: "LLM",
-        price: 1600,
-        photo: "assets/mentor9.jpg",
+//     },
+//     {
+//         name: "Ananya Reddy",
+//         university: "University of Chicago",
+//         course: "LLM",
+//         price: 1600,
+//         photo: "assets/mentor9.jpg",
         
-    }
-];
+//     }
+// ];
 
-// Render Mentors
-function renderMentors() {
-    const container = document.getElementById('mentorContainer');
-    let html = '';
+// // Render Mentors
+// function renderMentors() {
+//     const container = document.getElementById('mentorContainer');
+//     let html = '';
     
-    mentors.forEach(mentor => {
-        html += `
-            <div class="col-md-4">
-                <div class="mentor-card card h-100">
-                    <img src="${mentor.photo}" class="card-img-top" alt="${mentor.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${mentor.name}</h5>
-                        <p class="text-muted">${mentor.university}</p>
-                        <p class="text-primary fw-bold">₹${mentor.price}/session</p>
+//     mentors.forEach(mentor => {
+//         html += `
+//             <div class="col-md-4">
+//                 <div class="mentor-card card h-100">
+//                     <img src="${mentor.photo}" class="card-img-top" alt="${mentor.name}">
+//                     <div class="card-body">
+//                         <h5 class="card-title">${mentor.name}</h5>
+//                         <p class="text-muted">${mentor.university}</p>
+//                         <p class="text-primary fw-bold">₹${mentor.price}/session</p>
                         
-                    </div>
-                </div>
-            </div>
-        `;
-    });
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+//     });
     
-    container.innerHTML = html;
-}
+//     container.innerHTML = html;
+// }
 
 // Booking Function
 function bookSession(calendlyLink) {
