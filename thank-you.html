@@ -19,7 +19,7 @@
       flex-direction: column;
       align-items: center;
       background: white;
-      padding: 30px 40px;
+      padding: 30px 140px;
       border-radius: 12px;
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
       text-align: center;
@@ -43,6 +43,40 @@
       color: #555;
       margin-top: 15px;
     }
+    /* Responsive Styles */
+    @media (max-width: 800px) {
+      .thank-you-container {
+        padding: 20px 60px;
+        max-width: 80%;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .dotlottie-player {
+        width: 40px;
+        height: 40px;
+      }
+      p {
+        font-size: 16px;
+      }
+    } 
+
+    @media (max-width: 400px) {
+      .thank-you-container {
+        padding: 15px;
+        max-width: 90%;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .dotlottie-player {
+        width: 35px;
+        height: 35px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -58,7 +92,7 @@
         autoplay
       ></dotlottie-player>
     </div>
-    <p>We have received your registration. You will be contacted shortly.</p>
+    <p>We have received your registration.<br>You will be contacted shortly.</p>
   </div>
 
   <script

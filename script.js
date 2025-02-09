@@ -104,7 +104,7 @@ function bookSession(calendlyLink) {
 }
 
 // Initialize
-document.addEventListener('DOMContentLoaded', renderMentors);
+// document.addEventListener('DOMContentLoaded', renderMentors);
 
 // form with emailjs javascript
 // document.addEventListener('DOMContentLoaded', function () {
