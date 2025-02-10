@@ -7,8 +7,64 @@
     background: url('images/Backlogo.png') center,
     linear-gradient(rgba(96, 175, 235, 0.9), rgba(42,92,130,0.9)) ;
     height: 85vh;
-    background-size: 100% 100%;            
+    background-size: 100% 100%;   
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+   
+            
 }
+.box {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+
+  
+}
+/* Button Styling within Hero */
+.hero a.btn {
+  background: #04b93b;
+  color: #f9fafa;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 14px #050000;
+}
+
+/* Button Hover Effect */
+.hero a.btn:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+  color: #4A90E2;
+}
+
+
+@media screen and (max-width: 500px) {
+  .hero{
+    height: 100vw;
+    justify-content: center;
+  }
+  .box {
+      text-align: center; /* Ensures text is centered */
+      width: 100%;
+      margin-bottom: 150px;
+  }
+
+  .box h1 {
+      font-size: 1.6rem; /* Slightly smaller text */
+  }
+  .hero a.btn{
+    padding: 5px 15px;
+  }
+  }
 .box h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   }
@@ -22,24 +78,6 @@
    =============================================== */
    
   
-  /* Button Styling within Hero */
-  .hero a.btn {
-    background: #04b93b;
-    color: #f9fafa;
-    border-radius: 30px;
-    padding: 12px 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 8px 14px #050000;
-  }
-  
-  /* Button Hover Effect */
-  .hero a.btn:hover {
-    background: #f1f1f1;
-    transform: scale(1.05);
-    color: #4A90E2;
-  }
   
 body{
     background: linear-gradient(135deg, #e0f7fa, #ffffff);
@@ -641,3 +679,5 @@ footer {
       font-size: 18px;
   }
 }
+
+
