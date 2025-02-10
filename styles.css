@@ -47,7 +47,7 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .hero{
     height: 100vw;
     justify-content: center;
@@ -299,7 +299,7 @@ body{
   .form-container h2 {
     font-size: 1.8rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #2A5C82;
     text-align: center;
   }
   
@@ -559,6 +559,11 @@ body{
     object-fit: cover;
     margin-bottom: 20px;
   }
+  @media (max-width: 600px) {
+    #our-founders{
+      margin-bottom: 80px;
+    }
+  }
   /* Footer */
 
 
@@ -681,3 +686,62 @@ footer {
 }
 
 
+#commheading{
+   margin-bottom: 20px;
+   margin-top: 150px;
+   text-align: center;
+   font-size: 2.5rem;
+    font-weight: 700;
+    color: #2A5C82; /* Professional blue */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  margin: 35px;
+}
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+.quote {
+  color: green;
+  font-size: 1.1em;
+
+}
+.name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.stars {
+  color: gold;
+}
+@media (max-width: 900px) {
+  .testimonials {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      
+  }
+  .testimonial{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  #commheading {
+    font-size: 1.8em;
+}
+}@media (max-width: 400px) {
+  .testimonials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .testimonial {
+      width: 100%;
+  }
+}
