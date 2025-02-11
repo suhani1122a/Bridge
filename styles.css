@@ -321,7 +321,44 @@ body{
  .register-submit:hover {
     background-color: #3a7ac9;
   }
-  
+  /* Dropdown styling */
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Focus effect for dropdown */
+.form-group select:focus {
+  border-color: #4A90E2;
+  outline: none;
+}
+
+/* Ensure the 'Other University' field matches input styles */
+#other-university-group {
+  display: none; /* Initially hidden */
+}
+
+#other-university {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for the 'Other University' input field */
+#other-university:focus {
+  border-color: #4A90E2;
+  outline: none;
+}
+
 /* FAQ Section Styling */
 #faq{
     scroll-margin-top: 100px;
@@ -525,23 +562,6 @@ body{
     margin-bottom: 20px;
     border: 5px solid #e0e6ed
   }
-  .founder-social {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.founder-social a {
-    color: #2A5C82;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.founder-social a:hover {
-    color: #4A90E2;
-}
-
 
   @media (max-width: 600px) {
     #our-founders{

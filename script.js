@@ -149,3 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   scrollElements.forEach((el) => observer.observe(el));
 });
+
+
+function checkOtherUniversity() {
+  var universityDropdown = document.getElementById("university");
+  var otherUniversityGroup = document.getElementById("other-university-group");
+  if (universityDropdown.value === "Others") {
+    otherUniversityGroup.style.display = "block";
+    document.getElementById("other-university").required = true;
+  } else {
+    otherUniversityGroup.style.display = "none";
+    document.getElementById("other-university").required = false;
+  }
+}

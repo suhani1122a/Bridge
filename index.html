@@ -150,14 +150,7 @@
         <div class="founder-card">
           <img src="images\CEO.png" alt="Founder 1" class="img-fluid founder-photo">
           <h3>Shrutik Samantaray (CEO)</h3>
-          <div class="founder-social">
-            <a href="https://www.linkedin.com/in/shhrutik-samantaray/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/iamshhrutiksamantaray?igsh=N3QzejRkcGk0aXNo&utm_source=qr" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
+          
       </div>
       </div>
       <!-- Founder 2 -->
@@ -165,14 +158,7 @@
         <div class="founder-card">
           <img src="images\CTO.png" alt="Founder 2" class="img-fluid founder-photo">
           <h3>Suhani Agarwal (CTO)</h3>
-          <div class="founder-social">
-            <a href="https://www.linkedin.com/in/suhani-agarwal-946b1522b/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/suhaanii_13?igsh=bjFnYWV3NjVqa3Jw" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
+          
         </div>
       </div>
     </div>
@@ -200,6 +186,24 @@
           <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="university">Select Your Study Location</label>
+            <select id="university" name="university" required onchange="checkOtherUniversity()">
+              <option value="" disabled selected>Select an option</option>
+              <option value="IIT">IIT</option>
+              <option value="NIT">NIT</option>
+              <option value="Canada">Canada</option>
+              <option value="USA">USA</option>
+              <option value="Germany">Germany</option>
+              <option value="Australia">Australia</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+    
+          <div class="form-group" id="other-university-group" style="display: none;">
+            <label for="other-university">Specify Other Location</label>
+            <input type="text" id="other-university" name="other-university" />
           </div>
           <div class="form-group">
             <label for="query">How can we help?</label>
@@ -352,11 +356,7 @@
       </div>
   </footer>
 
-  <!--sticky navbar-->
-  <div class="content">
-    <!-- Main Content -->
-    <h1>Master ChatGPT: Transform Your Life With AI Chatbots</h1>
-</div>
+ 
 
 <!-- Sticky Footer Bar -->
 <div class="sticky-footer">
