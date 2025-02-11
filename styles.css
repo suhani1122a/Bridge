@@ -2,7 +2,11 @@
     --primary: #2A5C82;  /* Professional blue */
     --secondary: #FF6B6B; /* Accent color */
 }
-
+body{
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  
+}
+/*hero section*/
 .hero {
     background: url('images/Backlogo.png') center,
     linear-gradient(rgba(96, 175, 235, 0.9), rgba(42,92,130,0.9)) ;
@@ -13,21 +17,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0;
-   
-            
+    padding: 0;       
 }
+
 .box {
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  text-align: center;
-
-  
+  text-align: center; 
 }
-/* Button Styling within Hero */
+
 .hero a.btn {
   background: #04b93b;
   color: #f9fafa;
@@ -39,13 +39,11 @@
   box-shadow: 0 8px 14px #050000;
 }
 
-/* Button Hover Effect */
 .hero a.btn:hover {
   background: #f1f1f1;
   transform: scale(1.05);
   color: #4A90E2;
 }
-
 
 @media screen and (max-width: 600px) {
   .hero{
@@ -53,11 +51,10 @@
     justify-content: center;
   }
   .box {
-      text-align: center; /* Ensures text is centered */
+      text-align: center; 
       width: 100%;
       margin-bottom: 150px;
   }
-
   .box h1 {
       font-size: 1.6rem; /* Slightly smaller text */
   }
@@ -65,6 +62,7 @@
     padding: 5px 15px;
   }
   }
+
 .box h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   }
@@ -73,19 +71,7 @@
     margin-top: 200px; 
 }
 
-/* ===============================================
-   Hero Section - Aesthetic Enhancements
-   =============================================== */
-   
-  
-  
-body{
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);
-}
-
-/* ===============================================
-   Mentor Grid Section - Aesthetic Enhancements
-   =============================================== */
+/* Mentor Grid Section - Aesthetic Enhancements */
    #mentors {
     padding: 60px 0;
     background: linear-gradient(135deg, #e0f7fa, #ffffff);
@@ -101,7 +87,6 @@ body{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   }
   
-  /* Mentor Card Styling */
   #mentorContainer .mentor-card {
     background-color: #fff;
     border: none;
@@ -117,14 +102,12 @@ body{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
-  /* Mentor Image Styling */
   #mentorContainer .mentor-card img {
     width: 100%;
     height: auto;
     display: block;
   }
-  
-  /* Card Body Styling */
+
   #mentorContainer .mentor-card .card-body {
     text-align: center;
     padding: 20px;
@@ -148,12 +131,9 @@ body{
     color: #4A90E2;
   }
 
-  
-  /* ===============================================
-   Navbar Section - Aesthetic Enhancements
-   =============================================== */
+  /* Navbar Section - Aesthetic Enhancements */
 .navbar {
-    background: #fff; /* Clean white background */
+    background: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -161,10 +141,9 @@ body{
     padding: 10px 0;
   }
   
-  /* Navbar Brand (Logo and Title) */
   .navbar-brand {
     font-weight: bold;
-    color: #2A5C82 !important; /* Professional blue */
+    color: #2A5C82 !important; 
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;
@@ -175,12 +154,10 @@ body{
     border-radius: 5px;
   }
   
-  /* Navbar Brand Hover Effect */
   .navbar-brand:hover {
     transform: scale(1.05);
   }
   
-  /* Navbar Links */
   .navbar-nav .nav-link {
     color: #2A5C82 !important;
     font-weight: 600;
@@ -188,13 +165,11 @@ body{
     transition: color 0.3s ease, transform 0.3s ease;
   }
   
-  /* Navbar Links Hover Effect */
   .navbar-nav .nav-link:hover {
-    color: #4A90E2 !important; /* Brighter blue on hover */
+    color: #4A90E2 !important; 
     transform: scale(1.05);
   }
   
-  /* Navbar Toggler for Mobile */
   .navbar-toggler {
     border: none;
     outline: none;
@@ -209,7 +184,6 @@ body{
     margin-right: 12px;
 }
 
-/* Base styles for the button */
 .nav-link.call-btn {
     display: inline-flex;
     align-items: center;
@@ -221,8 +195,7 @@ body{
     color: #fff !important; /* Text color */
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
+  } 
   /* Arrow styling */
   .nav-link.call-btn .arrow {
     margin-left: 8px;
@@ -230,7 +203,6 @@ body{
     transition: transform 0.3s ease;
   }
   
-  /* Hover effect */
   .nav-link.call-btn:hover {
     background-color: rgba(255, 255, 255, 0.9); /* Darker shade on hover */
     transform: scale(1.05); /* Slight zoom effect */
@@ -240,6 +212,8 @@ body{
   .nav-link.call-btn:hover .arrow {
     transform: translateX(5px); /* Move arrow to the right */
   }
+
+  /* Marquee section */
 .marquee {
     width: 100%;
     overflow: hidden;
@@ -266,7 +240,8 @@ body{
       transform: translateX(-100%);
     }
   }
-/* styles.css */
+
+/* Registration form */
 .registration {
     font-family: Arial, sans-serif;
     display: flex;
@@ -277,13 +252,7 @@ body{
     padding: 60px 20px;
     margin-bottom: 100px;
     scroll-margin-top: 80px;
-   
 }
-
-
-/* ===============================================
-   Registration Form Section - Aesthetic Enhancements
-   =============================================== */
 
   .form-container {
     background-color: #fff;
@@ -294,7 +263,6 @@ body{
     width: 100%;
     text-align: center;
   }
-  
   /* Form heading styling */
   .form-container h2 {
     font-size: 1.8rem;
@@ -317,7 +285,6 @@ body{
     color: #555;
     font-weight: bold;
   }
-  
   /* Input & textarea fields styling */
   .form-group input,
   .form-group textarea {
@@ -355,13 +322,12 @@ body{
     background-color: #3a7ac9;
   }
   
-
+/* FAQ Section Styling */
 #faq{
     scroll-margin-top: 100px;
 }
-/* FAQ Section Styling */
+
 .faq-section {
-    
     margin: 0 auto; 
     font-family: Arial, sans-serif;
     margin-top: 50px;
@@ -379,8 +345,6 @@ body{
   font-weight: bold;
   color: #2A5C82; /* Professional blue */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-
-   
 } 
 
 .faq-item {
@@ -400,7 +364,6 @@ body{
   transition: background-color 0.3s ease, padding 0.3s ease;
   border-radius: 5px;
 }
-
 
 .faq-question:hover {
   background-color: #e0f7fa; 
@@ -446,13 +409,11 @@ body{
   color: #333;
 }
 
-  
-
-/* ===============================================
-   How It Works Section - Aesthetic Enhancements
-   =============================================== */
+/*   How It Works Section - Aesthetic Enhancements */
    #how-it-works {
     padding: 60px 0;
+    text-align: center;
+    overflow: hidden;
   }
   
   #how-it-works h2 {
@@ -462,9 +423,10 @@ body{
     margin-bottom: 40px;
     margin-top: 50px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
   }
-  
-  /* Style the individual cards inside the How It Works section */
   #how-it-works .col-md-4 > div {
     background-color: #fff;
     border: none;
@@ -504,7 +466,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: stretch;
-    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+    flex-wrap: wrap;
+    gap: 30px; /* Ensures proper wrapping on smaller screens */
   }
   
   /* Ensure each column is a flex container so that its child can stretch */
@@ -518,11 +481,13 @@ body{
     flex: 1;
     display: flex;
     flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 35px 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   }
 
-  /* ===============================================
-   Our Founders Section - Aesthetic Enhancements
-   =============================================== */
+  /*    Our Founders Section - Aesthetic Enhancements */
 #our-founders {
     padding: 60px 0;
   }
@@ -540,7 +505,7 @@ body{
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 80px; /* Ensures spacing on smaller screens */
     text-align: center;
@@ -553,20 +518,38 @@ body{
   
   /* Founder Photo Styling - Square Image */
   .founder-photo {
-    border-radius: 0;       /* Removes the circular shape */
+    border-radius: 0px;       /* Removes the circular shape */
     width: 250px;           /* Adjust size as needed */
     height: 250px;          /* Adjust size as needed */
     object-fit: cover;
     margin-bottom: 20px;
+    border: 5px solid #e0e6ed
   }
+  .founder-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.founder-social a {
+    color: #2A5C82;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.founder-social a:hover {
+    color: #4A90E2;
+}
+
+
   @media (max-width: 600px) {
     #our-founders{
       margin-bottom: 80px;
     }
   }
+
   /* Footer */
-
-
 footer {
   margin-top: 110px;
   background-color: #2c3e50;
@@ -684,8 +667,45 @@ footer {
       font-size: 18px;
   }
 }
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(rgba(96, 175, 235, 0.9), rgba(42,92,130,0.9)) ;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 19px;
+  border-radius: 5px;
+  backdrop-filter: blur(1px);
+}
 
+/* Join Now Button */
+.join-btn {
+  background: #04b93b;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+  
+}
 
+.join-btn:hover {
+  background: #16a34a;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .sticky-footer {
+      display: none; /* Hide on larger screens */
+  }
+}
+/* Testimonials */
 #commheading{
    margin-bottom: 20px;
    margin-top: 150px;
@@ -744,4 +764,15 @@ footer {
   .testimonial {
       width: 100%;
   }
+}
+/* Scroll Animation */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

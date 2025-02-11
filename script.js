@@ -106,27 +106,6 @@ function bookSession(calendlyLink) {
 // Initialize
 // document.addEventListener('DOMContentLoaded', renderMentors);
 
-// form with emailjs javascript
-// document.addEventListener('DOMContentLoaded', function () {
-//     emailjs.init('Qz1SHWFAJTNzzJyoZ'); // Replace with your EmailJS public key
-
-//     const form = document.getElementById('contact-form');
-
-//     form.addEventListener('submit', function (event) {
-//         event.preventDefault();
-
-//         // Send the form data using EmailJS
-//         emailjs.sendForm('service_cpwyxbg', 'template_ucvm5au', form)
-//             .then(function (response) {
-//                 // Redirect to the thank-you page
-//                 window.location.href = 'thank-you.html';
-//                 form.reset(); // Reset the form after successful submission
-//             }, function (error) {
-//                 alert('Failed to send the message, please try again.');
-//                 console.error('EmailJS error:', error);
-//             });
-//     });
-// });
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxCKGRQQKnRXQXxTDU8eC0V_2kk6Zo3LqNN41TQO3rufyActmdT2hc0sKHzrgVDe7Y/exec'
 
@@ -148,4 +127,25 @@ document.querySelectorAll('.faq-question').forEach((question) => {
         const faqItem = question.parentElement;
         faqItem.classList.toggle('active');
     });
+});
+// Scroll Animation Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollElements = document.querySelectorAll('.scroll-animation');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible'); // Optional: Remove if you don't want animations to reset
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Adjust this value to control when the animation triggers
+    }
+  );
+
+  scrollElements.forEach((el) => observer.observe(el));
 });
