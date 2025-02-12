@@ -251,7 +251,7 @@ body{
     margin: 0;
     padding: 60px 20px;
     margin-bottom: 100px;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 130px;
 }
 
   .form-container {
@@ -259,13 +259,14 @@ body{
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     text-align: center;
   }
   /* Form heading styling */
   .form-container h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
     margin-bottom: 30px;
     color: #2A5C82;
     text-align: center;
@@ -357,6 +358,11 @@ body{
 #other-university:focus {
   border-color: #4A90E2;
   outline: none;
+}
+@media (max-width: 600px) {
+  .form-container h2{
+    font-size: 19px;
+  }
 }
 
 /* FAQ Section Styling */
@@ -702,7 +708,10 @@ footer {
   border-radius: 5px;
   backdrop-filter: blur(1px);
 }
-
+.sticky-footer :hover{
+  background-color: #04b93b; /* Default background color */
+    color: #fff
+}
 /* Join Now Button */
 .join-btn {
   background: #04b93b;

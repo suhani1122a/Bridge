@@ -111,15 +111,23 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxCKGRQQKnRXQXxTDU8eC
 
 const form = document.forms['contact-form']
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => {
-    const thankYouPageURL = 'thank-you.html'; // Your thank-you page URL
-    window.location.href = thankYouPageURL;
-  })
-  .catch(error => console.error('Error!', error.message))
-})
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+
+    // Redirect after a very short delay (even if fetch isn’t done yet)
+    setTimeout(() => {
+      window.location.href = 'thank-you.html';
+    }, 300); // 300ms delay
+
+    await response;
+  } catch (error) {
+    console.error('Error!', error.message);
+  }
+});
+
 
 // Add event listeners to all FAQ questions
 document.querySelectorAll('.faq-question').forEach((question) => {
