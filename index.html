@@ -41,6 +41,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#how-it-works">How It Works</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://bridgepeerconsulting.github.io/MentorRegistration/">Join as Mentor</a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#mentors">Mentors</a>
             </li> -->
@@ -75,26 +78,20 @@
     <!--logos-->
     <div class="marquee">
       <div class="marquee-content">
-        <img src="images\Stanford.png" alt="Stanford University">
-        <img src="images\Princeton.png" alt="Princeton University">
-        <img src="images\Harvard.png" alt="Harvard University">
-        <img src="images\Columbia.png" alt="Columbia University">
-        <img src="images\Penn.png" alt="Penn University">
-        <img src="images\Toronto.png" alt="Toronto University">
-        <img src="images\MIT.png" alt="MIT">
-        <img src="images\Oxford.png" alt="University of Oxford">
-        <img src="images\Cornell.png" alt="Cornell University">
+        <img src="images\CU.jpg" alt="Chandigarh University">
+        <img src="images\Galgotias.jpg" alt="Galgotias University">
+        <img src="images\LPU.jpg" alt="Lovely Professional University">
+        <img src="images\Manipal.jpg" alt="Manipal University">
+        <img src="images\Sharda.jpg" alt="Sharda University">
+        
       </div>
       <div class="marquee-content" aria-hidden="true">
-        <img src="images\Stanford.png" alt="Stanford University">
-        <img src="images\Princeton.png" alt="Princeton University">
-        <img src="images\Harvard.png" alt="Harvard University">
-        <img src="images\Columbia.png" alt="Columbia University">
-        <img src="images\Penn.png" alt="Penn University">
-        <img src="images\Toronto.png" alt="Toronto University">
-        <img src="images\MIT.png" alt="MIT">
-        <img src="images\Oxford.png" alt="University of Oxford">
-        <img src="images\Cornell.png" alt="Cornell University">
+        <img src="images\CU.jpg" alt="Chandigarh University">
+        <img src="images\Galgotias.jpg" alt="Galgotias University">
+        <img src="images\LPU.jpg" alt="Lovely Professional University">
+        <img src="images\Manipal.jpg" alt="Manipal University">
+        <img src="images\Sharda.jpg" alt="Sharda University">
+        
       </div>
     </div>
     <!-- How It Works -->
@@ -188,21 +185,47 @@
             <input type="tel" id="phone" name="phone" />
           </div>
           <div class="form-group">
-            <label for="university">Select Your Study Location</label>
+            <label for="university">Select the University</label>
             <select id="university" name="university" required onchange="checkOtherUniversity()">
               <option value="" disabled selected>Select an option</option>
-              <option value="IIT">IIT</option>
-              <option value="NIT">NIT</option>
-              <option value="Canada">Canada</option>
-              <option value="USA">USA</option>
-              <option value="Germany">Germany</option>
-              <option value="Australia">Australia</option>
+              <option value="Amity">Amity University, Noida</option>
+              <option value="Amrita">Amrita Vishwa Vidyapeetham, Coimbatore</option>
+              <option value="Ashoka">Ashoka University, Sonipat</option>
+              <option value="Banasthali">Banasthali Vidyapith, Banasthali</option>
+              <option value="Bharati">Bharati Vidyapeeth, Pune</option>
+              <option value="Bits">Birla Institute of Technology and Science, Pilani</option>
+              <option value="CU">Chandigarh University, Mohali</option>
+              <option value="Chitkara">Chitkara University, Punjab</option>
+              <option value="Christ">Christ University, Bangalore</option>
+              <option value="DYUniv">Dr. DY Patil University, Navi Mumbai</option>
+              <option value="DYVidya">Dr. DY Patil Vidyapeeth, Pune</option>
+              <option value="Galgotias">Galgotias University, Greater Noida</option>
+              <option value="Gitam">GITAM University, Visakhapatnam</option>
+              <option value="Geu">Graphic Era University, Dehradun</option>
+              <option value="iiit">International Institute of Information Technology, Hyderabad</option>
+              <option value="jain">Jain University, Bangalore</option>
+              <option value="jss">JSS Academy of Higher Education and Research, Mysore</option>
+              <option value="kalinga">Kalinga Institute of Industrial Technology, Bhubaneswar</option>
+              <option value="koneru">Koneru Lakshmaiah Education Foundation, Guntur</option>
+              <option value="lpu">Lovely Professional University, Phagwara</option>
+              <option value="manipal">Manipal Academy of Higher Education, Manipal</option>
+              <option value="nmims">Narsee Monjee Institute of Management Studies, Mumbai</option>
+              <option value="noida">Noida International University, Greater Noida</option>
+              <option value="opjindal">O.P. Jindal Global University, Sonipat</option>
+              <option value="parul">Parul University, Waghodia</option>
+              <option value="siksha">Siksha 'O' Anusandhan, Bhubaneswar</option>
+              <option value="shivnadhar">Shiv Nadar University, Greater Noida</option>
+              <option value="srm">SRM Institute of Science and Technology, Chennai</option>
+              <option value="symbiosis">Symbiosis International University, Pune</option>
+              <option value="tata">Tata Institute of Social Sciences, Mumbai</option>
+              <option value="thapar">Thapar Institute of Engineering and Technology, Patiala</option>
+              <option value="upes">University of Petroleum and Energy Studies, Dehradun</option>
               <option value="Others">Others</option>
             </select>
           </div>
     
           <div class="form-group" id="other-university-group" style="display: none;">
-            <label for="other-university">Specify Other Location</label>
+            <label for="other-university">Specify Other University Name</label>
             <input type="text" id="other-university" name="other-university" />
           </div>
           <div class="form-group">

@@ -187,14 +187,15 @@ body{
 .nav-link.call-btn {
     display: inline-flex;
     align-items: center;
-    padding: 2px 11px;
+    padding: 2px 30px;
     margin-left: 8px;
     margin-top: 6px;
     border-radius: 25px; /* Oval shape */
     background-color: #04b93b; /* Default background color */
-    color: #fff !important; /* Text color */
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #f9fafa !important; /* Text color */
+    font-weight: 600; /* Matching font weight */
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px #050000;
   } 
   /* Arrow styling */
   .nav-link.call-btn .arrow {
@@ -204,8 +205,10 @@ body{
   }
   
   .nav-link.call-btn:hover {
-    background-color: rgba(255, 255, 255, 0.9); /* Darker shade on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+   background-color: rgba(255, 255, 255, 0.9); 
+    transform: scale(1.05); 
+    color: #4A90E2 !important; /* Slight zoom effect */
+    
   }
   
   /* Arrow animation on hover */
@@ -332,6 +335,7 @@ body{
   transition: border-color 0.3s ease;
   background-color: #fff;
   cursor: pointer;
+  
 }
 
 /* Focus effect for dropdown */
@@ -566,7 +570,7 @@ body{
     height: 250px;          /* Adjust size as needed */
     object-fit: cover;
     margin-bottom: 20px;
-    border: 5px solid #e0e6ed
+    
   }
 
   @media (max-width: 600px) {
@@ -749,8 +753,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 20px;
-  margin: 35px;
+  padding: 10px;
+  margin: 85px;
 }
 .testimonial {
   background-color: white;
