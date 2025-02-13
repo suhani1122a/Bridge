@@ -195,7 +195,7 @@ body{
     color: #f9fafa !important; /* Text color */
     font-weight: 600; /* Matching font weight */
     transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 2px 4px #050000;
+    box-shadow: 0 2px 2px #050000;
   } 
   /* Arrow styling */
   .nav-link.call-btn .arrow {
@@ -244,6 +244,105 @@ body{
     }
   }
 
+/*   How It Works Section */
+#how-it-works {
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+  /* border: 2px solid red; */
+}
+
+#how-it-works h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2A5C82; /* Professional blue */
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+}
+#how-it-works .col-md-4 > div {
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#how-it-works .col-md-4 > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+#how-it-works i {
+  color: #4A90E2; /* A bright, modern blue */
+  margin: 20px;
+}
+
+#how-it-works h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#how-it-works p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.howitworks-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px; /* Ensures proper wrapping on smaller screens */
+}
+
+/* Ensure each column is a flex container so that its child can stretch */
+.howitworks-cards > .col-md-4 {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Force the inner card to fill the available height and arrange content vertically */
+.howitworks-cards .col-md-4 > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 35px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+@media (max-width: 992px) {
+  #how-it-works {
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #how-it-works h2 {
+    font-size: 2rem;
+  }
+
+  #how-it-works .col-lg-4 > div {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  #how-it-works h2 {
+    font-size: 1.8rem;
+  }
+
+  #how-it-works .col-lg-4 > div {
+    padding: 20px 10px;
+  }
+}
 /* Registration form */
 .registration {
     font-family: Arial, sans-serif;
@@ -251,10 +350,10 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    padding: 60px 20px;
-    margin-bottom: 100px;
-    scroll-margin-top: 130px;
+    padding: 500px 100px;
+    margin: 100px;
+    /* scroll-margin-top: 130px; */
+    /* border: 2px solid green; */
 }
 
   .form-container {
@@ -263,7 +362,6 @@ body{
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    width: 100%;
     text-align: center;
   }
   /* Form heading styling */
@@ -326,23 +424,23 @@ body{
     background-color: #3a7ac9;
   }
   /* Dropdown styling */
-.form-group select {
+/* .form-group select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 2px solid orange;
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
   background-color: #fff;
   cursor: pointer;
   
-}
+} */
 
 /* Focus effect for dropdown */
-.form-group select:focus {
+/* .form-group select:focus {
   border-color: #4A90E2;
   outline: none;
-}
+} */
 
 /* Ensure the 'Other University' field matches input styles */
 #other-university-group {
@@ -363,34 +461,319 @@ body{
   border-color: #4A90E2;
   outline: none;
 }
+
+/* Dropdown styling */
+#university {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+  max-height: 150px; /* Limit the height of the dropdown */
+  overflow-y: auto;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none; /* Remove default arrow in some browsers */
+    -webkit-appearance: none; /* Remove default arrow in Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e"); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+/* Dropdown hover and focus states */
+#university:hover {
+  border-color: #888;
+}
+
+#university:focus {
+  border-color: #04b93b;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Dropdown options styling */
+#university option {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Scrollbar styling */
+#university {
+  scrollbar-width: thin;
+  scrollbar-color: #04b93b #f1f1f1;
+}
+
+#university::-webkit-scrollbar {
+  width: 18px;
+}
+
+#university::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#university::-webkit-scrollbar-thumb {
+  background: #04b93b;
+  border-radius: 4px;
+}
+
+#university::-webkit-scrollbar-thumb:hover {
+  background: #04b93b;
+}
+/* Add extra margin when the dropdown is open */
+.form-group.dropdown-open {
+  margin-bottom: 200px; /* Adjust this value based on the height of your dropdown options */
+  transition: margin-bottom 0.3s ease; /* Smooth transition */
+}
+
 @media (max-width: 600px) {
   .form-container h2{
     font-size: 19px;
   }
+ 
+}
+@media (max-width: 768px) {
+  /* Adjust font size and padding for smaller screens */
+  .form-group label {
+      font-size: 14px;
+  }
+  #university option {
+    font-size: 16px; /* Smaller font size for dropdown options */
+  }
+  #university {
+    max-height: 100px; /* Smaller max-height for smaller screens */
+  }
+  
+
+  /* Reduce the max-height for smaller screens */
+  #university:focus {
+      max-height: 9em; /* Show fewer options on smaller screens */
+  }
 }
 
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .form-group label {
+      font-size: 13px;
+  }
+  #university option {
+    font-size: 11px; /* Even smaller font size for very small screens */
+  }
+  #university {
+      font-size: 12px;
+      padding: 6px;
+      max-height: 80px;
+      background-position: right 6px center; /* Adjust arrow position */
+  }
+
+  /* Reduce the max-height even more for very small screens */
+  #university:focus {
+      max-height: 2em; /* Show fewer options on very small screens */
+  }
+}
+/* Testimonials */
+#comments {
+  /* border: 2px solid blue; */
+  padding: 40px 20px;
+}
+
+#commheading {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2A5C82; /* Professional blue */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Grid for Testimonials */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased min width */
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px; /* Increased width */
+  width: 90%; /* Takes up more space on mobile */
+  margin: auto; /* Centers it */
+}
+
+/* Hover Effect */
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote {
+  color: green;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.name {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #commheading {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+    max-width: 95%; /* Increased width */
+    text-align: left;
+  }
+
+  .quote {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .name {
+    text-align: right;
+    font-size: 1rem;
+  }
+
+  .stars {
+    text-align: right;
+  }
+}
+@media (max-width: 500px){
+  #commheading {
+    font-size: 1.8rem;
+  }
+}
+ /*    Our Founders Section - Aesthetic Enhancements */
+ #our-founders {
+  padding: 60px 0;
+  /* border: 2px solid brown; */
+  margin-top: 100px;
+}
+
+#our-founders h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2A5C82; /* Professional blue */
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Founder Card Styling */
+.founder-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 80px; /* Ensures spacing on smaller screens */
+  text-align: center;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Founder Photo Styling - Square Image */
+.founder-photo {
+  border-radius: 0px;       /* Removes the circular shape */
+  width: 250px;           /* Adjust size as needed */
+  height: 250px;          /* Adjust size as needed */
+  object-fit: cover;
+  margin-bottom: 20px;
+  
+}
+
+@media (max-width: 600px) {
+  #our-founders{
+    margin-bottom: 80px;
+  }
+}
+
+/* Scroll Animation */
+.scroll-animation {
+ opacity: 0;
+ transform: translateY(20px);
+ transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+}
+
+.scroll-animation.visible {
+ opacity: 1;
+ transform: translateY(0);
+}
 /* FAQ Section Styling */
-#faq{
-    scroll-margin-top: 100px;
+
+ #faq {
+  /* border: 2px solid purple; */
+  scroll-margin-top: 100px;
+  margin-top: 100px;
 }
 
 .faq-section {
-    margin: 0 auto; 
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 40px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 90%; /* Adjusts for different screen sizes */
 }
 
 .faq-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
   font-weight: bold;
-  color: #2A5C82; /* Professional blue */
+  color: #2A5C82;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 } 
 
@@ -417,8 +800,8 @@ body{
 }
 
 .faq-question span {
-    font-size: 1.1rem;
-    color: #333;
+  font-size: 1.1rem;
+  color: #333;
 }
 
 .faq-question .arrow {
@@ -428,10 +811,10 @@ body{
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #fff;
 }
 
 .faq-answer p {
@@ -443,141 +826,66 @@ body{
 
 /* Active state for FAQ item */
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust based on content */
-    padding: 10px 15px;
+  max-height: 200px;
+  padding: 10px 15px;
 }
 
 .faq-item.active .arrow {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
+
 .faq-question span:first-child {
   font-size: 1.2rem;
   font-weight: 600;
   color: #333;
 }
 
-/*   How It Works Section - Aesthetic Enhancements */
-   #how-it-works {
-    padding: 60px 0;
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  #how-it-works h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2A5C82; /* Professional blue */
-    margin-bottom: 40px;
-    margin-top: 50px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
-  }
-  #how-it-works .col-md-4 > div {
-    background-color: #fff;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+/* ======= Responsive Design ======= */
+@media (max-width: 768px) {
+  .faq-section {
+    width: 95%;
     padding: 30px 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  #how-it-works .col-md-4 > div:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  .faq-section h2 {
+    font-size: 1.8rem;
   }
-  
-  /* Enhance the icons to make them pop */
-  #how-it-works i {
-    color: #4A90E2; /* A bright, modern blue */
-    margin-bottom: 20px;
+
+  .faq-question {
+    padding: 15px 12px;
   }
-  
-  /* Update the step titles */
-  #how-it-works h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  /* Improve the description text */
-  #how-it-works p {
+
+  .faq-question span {
     font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
   }
 
-  .howitworks-cards {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 30px; /* Ensures proper wrapping on smaller screens */
+  .faq-answer p {
+    font-size: 0.95rem;
   }
-  
-  /* Ensure each column is a flex container so that its child can stretch */
-.howitworks-cards > .col-md-4 {
-    display: flex;
-    align-items: stretch;
-  }
-  
-  /* Force the inner card to fill the available height and arrange content vertically */
-  .howitworks-cards .col-md-4 > div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    padding: 35px 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    width: 100%;
+    padding: 25px 15px;
   }
 
-  /*    Our Founders Section - Aesthetic Enhancements */
-#our-founders {
-    padding: 60px 0;
-  }
-  
-  #our-founders h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2A5C82; /* Professional blue */
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Founder Card Styling */
-  .founder-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 80px; /* Ensures spacing on smaller screens */
-    text-align: center;
-  }
-  
-  .founder-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Founder Photo Styling - Square Image */
-  .founder-photo {
-    border-radius: 0px;       /* Removes the circular shape */
-    width: 250px;           /* Adjust size as needed */
-    height: 250px;          /* Adjust size as needed */
-    object-fit: cover;
-    margin-bottom: 20px;
-    
+  .faq-section h2 {
+    font-size: 1.6rem;
   }
 
-  @media (max-width: 600px) {
-    #our-founders{
-      margin-bottom: 80px;
-    }
+  .faq-question {
+    padding: 12px 10px;
   }
+
+  .faq-question span {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
+}
 
   /* Footer */
 footer {
@@ -737,75 +1045,4 @@ footer {
   .sticky-footer {
       display: none; /* Hide on larger screens */
   }
-}
-/* Testimonials */
-#commheading{
-   margin-bottom: 20px;
-   margin-top: 150px;
-   text-align: center;
-   font-size: 2.5rem;
-    font-weight: 700;
-    color: #2A5C82; /* Professional blue */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-
-}
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 10px;
-  margin: 85px;
-}
-.testimonial {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: left;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-}
-.quote {
-  color: green;
-  font-size: 1.1em;
-
-}
-.name {
-  font-weight: bold;
-  margin-top: 10px;
-}
-.stars {
-  color: gold;
-}
-@media (max-width: 900px) {
-  .testimonials {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      
-  }
-  .testimonial{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  #commheading {
-    font-size: 1.8em;
-}
-}@media (max-width: 400px) {
-  .testimonials {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  .testimonial {
-      width: 100%;
-  }
-}
-/* Scroll Animation */
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.6s ease-out, transform 1.6s ease-out;
-}
-
-.scroll-animation.visible {
-  opacity: 1;
-  transform: translateY(0);
 }

@@ -170,3 +170,26 @@ function checkOtherUniversity() {
     document.getElementById("other-university").required = false;
   }
 }
+document.addEventListener('click', function (event) {
+  const dropdown = document.getElementById('university');
+  if (event.target !== dropdown) {
+      dropdown.size = 1; // Collapse the dropdown
+  }
+});
+
+document.getElementById('university').addEventListener('click', function () {
+  this.size = 7; // Expand to show 5 options
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const universityDropdown = document.getElementById("university");
+
+  universityDropdown.addEventListener("focus", function () {
+    // Add a class to the parent form-group to add extra margin
+    this.closest(".form-group").classList.add("dropdown-open");
+  });
+
+  universityDropdown.addEventListener("blur", function () {
+    // Remove the class when the dropdown loses focus
+    this.closest(".form-group").classList.remove("dropdown-open");
+  });
+});
