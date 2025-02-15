@@ -249,7 +249,7 @@ body{
   text-align: center;
   overflow: hidden;
   margin-top: 50px;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 #how-it-works h2 {
@@ -257,6 +257,7 @@ body{
   font-weight: 700;
   color: #2A5C82; /* Professional blue */
   margin-bottom: 40px;
+  margin-top: 40px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -345,244 +346,193 @@ body{
 }
 /* Registration form */
 .registration {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 500px 100px;
-    margin: 100px;
-    /* scroll-margin-top: 130px; */
-    /* border: 2px solid green; */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  scroll-margin-top: 80px;
+  border: 2px solid green;
+  padding: 20px; /* Ensures some space inside the border */
+  box-sizing: border-box;
 }
 
-  .form-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    text-align: center;
-  }
-  /* Form heading styling */
-  .form-container h2 {
-    font-size: 1.3rem;
-    font-weight: bolder;
-    margin-bottom: 30px;
-    color: #2A5C82;
-    text-align: center;
-  }
-  
-  /* Form group: Spacing and left alignment for labels */
-  .form-group {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  /* Label styling */
-  .form-group label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: #555;
-    font-weight: bold;
-  }
-  /* Input & textarea fields styling */
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  /* Focus state for inputs to highlight the field */
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #4A90E2;
-    outline: none;
-  }
-  
-  /* Submit button styling */
-  .register-submit {
-    width: 100%;
-    padding: 14px;
-    background-color: #04b93b;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-  }
-  
-  /* Hover effect for submit button */
- .register-submit:hover {
-    background-color: #3a7ac9;
-  }
-  /* Dropdown styling */
-/* .form-group select {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid orange;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
+.form-container {
   background-color: #fff;
-  cursor: pointer;
-  
-} */
-
-/* Focus effect for dropdown */
-/* .form-group select:focus {
-  border-color: #4A90E2;
-  outline: none;
-} */
-
-/* Ensure the 'Other University' field matches input styles */
-#other-university-group {
-  display: none; /* Initially hidden */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%; /* Ensures responsiveness */
+  text-align: center;
+  margin: auto;
+}
+/* Form heading styling */
+.form-container h2 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: #2A5C82;
+  text-align: center;
 }
 
-#other-university {
+/* Form group: Spacing and left alignment for labels */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+/* Input & textarea fields styling */
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+}
+
+/* Focus state for inputs to highlight the field */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4A90E2;
+  outline: none;
+}
+
+/* Submit button styling */
+.register-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #04b93b;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Hover effect for submit button */
+.register-submit:hover {
+  background-color: #3a7ac9;
+}
+
+#other-university {
+width: 100%;
+padding: 12px;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 1rem;
+transition: border-color 0.3s ease;
 }
 
 /* Focus effect for the 'Other University' input field */
 #other-university:focus {
-  border-color: #4A90E2;
-  outline: none;
+border-color: #4A90E2;
+outline: none;
 }
 
 /* Dropdown styling */
-#university {
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  color: #333;
-  outline: none;
-  cursor: pointer;
-  z-index: 1;
-  max-height: 150px; /* Limit the height of the dropdown */
-  overflow-y: auto;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  appearance: none; /* Remove default arrow in some browsers */
-    -webkit-appearance: none; /* Remove default arrow in Safari */
-    -moz-appearance: none; /* Remove default arrow in Firefox */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e"); /* Custom dropdown arrow */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
+.dropdown-container {
+  position: relative;
 }
 
-/* Dropdown hover and focus states */
-#university:hover {
-  border-color: #888;
+/* Hide "Other University" field initially */
+#other-university-group {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
 }
-
-#university:focus {
-  border-color: #04b93b;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-/* Dropdown options styling */
-#university option {
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
-  background-color: #fff;
-  color: #333;
-}
-
 /* Scrollbar styling */
-#university {
-  scrollbar-width: thin;
-  scrollbar-color: #04b93b #f1f1f1;
+#university-options {
+scrollbar-width: thin;
+scrollbar-color: #04b93b #f1f1f1;
 }
 
-#university::-webkit-scrollbar {
-  width: 18px;
+#university-options::-webkit-scrollbar {
+width: 18px;
 }
-
-#university::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
+.dropdown-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-#university::-webkit-scrollbar-thumb {
-  background: #04b93b;
-  border-radius: 4px;
+.dropdown-options div {
+  padding: 8px;
+  cursor: pointer;
 }
-
-#university::-webkit-scrollbar-thumb:hover {
-  background: #04b93b;
+.dropdown-options div:hover {
+  background: #f0f0f0;
 }
-/* Add extra margin when the dropdown is open */
-.form-group.dropdown-open {
-  margin-bottom: 200px; /* Adjust this value based on the height of your dropdown options */
-  transition: margin-bottom 0.3s ease; /* Smooth transition */
+.dropdown-options.show {
+  max-height: 150px;
+  overflow-y: auto;
+  transition: max-height 0.3s ease-in;
 }
-
-@media (max-width: 600px) {
-  .form-container h2{
-    font-size: 19px;
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .registration {
+    margin: 50px;
+    padding: 15px;
   }
- 
-}
-@media (max-width: 768px) {
-  /* Adjust font size and padding for smaller screens */
+  .form-container {
+    padding: 20px;
+    max-width: 90%;
+  }
   .form-group label {
-      font-size: 14px;
+    font-size: 0.9rem;
   }
-  #university option {
-    font-size: 16px; /* Smaller font size for dropdown options */
+  .form-group input, .form-group textarea {
+    font-size: 0.9rem;
+    padding: 10px;
   }
-  #university {
-    max-height: 100px; /* Smaller max-height for smaller screens */
-  }
-  
-
-  /* Reduce the max-height for smaller screens */
-  #university:focus {
-      max-height: 9em; /* Show fewer options on smaller screens */
+  .register-submit {
+    padding: 12px;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
-  /* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .registration {
+    margin: 20px;
+    padding: 10px;
+  }
+  .form-container {
+    padding: 15px;
+    max-width: 95%;
+  }
   .form-group label {
-      font-size: 13px;
+    font-size: 0.85rem;
   }
-  #university option {
-    font-size: 11px; /* Even smaller font size for very small screens */
+  .form-group input, .form-group textarea {
+    font-size: 0.85rem;
+    padding: 8px;
   }
-  #university {
-      font-size: 12px;
-      padding: 6px;
-      max-height: 80px;
-      background-position: right 6px center; /* Adjust arrow position */
-  }
-
-  /* Reduce the max-height even more for very small screens */
-  #university:focus {
-      max-height: 2em; /* Show fewer options on very small screens */
+  .register-submit {
+    padding: 10px;
+    font-size: 0.85rem;
   }
 }
+
 /* Testimonials */
 #comments {
   /* border: 2px solid blue; */

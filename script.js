@@ -158,38 +158,109 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollElements.forEach((el) => observer.observe(el));
 });
 
+const universities = [
+  "Amity University, Noida",  
+"Amrita Vishwa Vidyapeetham, Coimbatore" , 
+"Ashoka University, Sonipat",  
+"Banasthali Vidyapeeth, Banasthali", 
+"Bharath Institute of Higher Education and Research, Chennai",  
+"Bharati Vidyapeeth, Pune" , 
+"Birla Institute of Technology and Science, Pilani" , 
+"Birla Institute of Technology, Mesra",  
+"Chandigarh University, Mohali",  
+"Chitkara University, Punjab",  
+"Christ University, Bangalore",  
+"Datta Meghe Institute of Medical Sciences, Wardha",  
+"Dr. DY Patil University, Navi Mumbai",  
+"Dr. DY Patil Vidyapeeth, Pune" , 
+"Galgotias University, Greater Noida" , 
+"GITAM University, Visakhapatnam" , 
+"GNA University, Phagwara",  
+"Graphic Era University, Dehradun",  
+"International Institute of Information Technology, Hyderabad",  
+"Jain University, Bangalore",  
+"Jamia Hamdard, New Delhi",  
+"JSS Academy of Higher Education and Research, Mysore",  
+"Kalasalingam Academy of Research and Education, Virudhunagar",  
+"Kalinga Institute of Industrial Technology, Bhubaneswar",  
+"KLE Academy of Higher Education and Research, Belgaum",  
+"Koneru Lakshmaiah Education Foundation, Guntur",  
+"Lovely Professional University, Phagwara" ,  
+"Maharishi Markandeshwar University, Mullana",  
+"Manipal Academy of Higher Education, Manipal",  
+"Manav Rachna International Institute of Research and Studies, Faridabad",  
+"Narsee Monjee Institute of Management Studies, Mumbai" , 
+"NITTE University, Mangalore",  
+"Noida International University, Greater Noida",  
+"O.P. Jindal Global University, Sonipat",  
+"Parul University, Waghodia",  
+"Saveetha Institute of Medical and Technical Sciences, Chennai",  
+"Sathyabama Institute of Science and Technology, Chennai",  
+"Shanmugha Arts Science Technology Research and Academy, Thanjavur",  
+"Shiv Nadar University, Greater Noida",  
+"Shoolini University, Solan",  
+"Siksha 'O' Anusandhan, Bhubaneswar",  
+"Sri Ramachandra Institute of Higher Education and Research, Chennai",  
+"Sri Sathya Sai Institute of Higher Learning, Prasanthi Nilayam",  
+"SRM Institute of Science and Technology, Chennai",  
+"Symbiosis International University, Pune",  
+"Tata Institute of Social Sciences, Mumbai", 
+"Thapar Institute of Engineering and Technology, Patiala", 
+"University of Petroleum and Energy Studies, Dehradun",  
+"Vellore Institute of Technology, Vellore",
+  "Others"
+];
 
-function checkOtherUniversity() {
-  var universityDropdown = document.getElementById("university");
-  var otherUniversityGroup = document.getElementById("other-university-group");
-  if (universityDropdown.value === "Others") {
-    otherUniversityGroup.style.display = "block";
-    document.getElementById("other-university").required = true;
-  } else {
-    otherUniversityGroup.style.display = "none";
-    document.getElementById("other-university").required = false;
+function populateDropdown() {
+  let dropdown = document.getElementById("university-options");
+  dropdown.innerHTML = "";
+  universities.forEach(uni => {
+      let option = document.createElement("div");
+      option.textContent = uni;
+      option.onclick = function() {
+          document.getElementById("search-university").value = uni;
+          dropdown.style.display = "none";
+          checkOtherUniversity();
+      };
+      dropdown.appendChild(option);
+  });
+}
+
+function showDropdown() {
+  let dropdown = document.getElementById("university-options");
+  dropdown.style.display = "block";
+  populateDropdown();
+}
+
+function filterUniversities() {
+  let input = document.getElementById("search-university").value.toLowerCase();
+  let options = document.getElementById("university-options").children;
+  for (let i = 0; i < options.length; i++) {
+      let uni = options[i].textContent.toLowerCase();
+      options[i].style.display = uni.includes(input) ? "block" : "none";
   }
 }
-document.addEventListener('click', function (event) {
-  const dropdown = document.getElementById('university');
-  if (event.target !== dropdown) {
-      dropdown.size = 1; // Collapse the dropdown
+
+function checkOtherUniversity() {
+  let selectedValue = document.getElementById("search-university").value;
+  let otherUniversityGroup = document.getElementById("other-university-group");
+  let otherUniversityInput = document.getElementById("other-university");
+
+  if (selectedValue === "Others") {
+      otherUniversityGroup.style.display = "block";
+      otherUniversityInput.required = true;
+  } else {
+      otherUniversityGroup.style.display = "none";
+      otherUniversityInput.required = false;
+  }
+}
+
+document.addEventListener("click", function(event) {
+  let dropdown = document.getElementById("university-options");
+  let searchBox = document.getElementById("search-university");
+  if (!searchBox.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.style.display = "none";
   }
 });
 
-document.getElementById('university').addEventListener('click', function () {
-  this.size = 7; // Expand to show 5 options
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const universityDropdown = document.getElementById("university");
-
-  universityDropdown.addEventListener("focus", function () {
-    // Add a class to the parent form-group to add extra margin
-    this.closest(".form-group").classList.add("dropdown-open");
-  });
-
-  universityDropdown.addEventListener("blur", function () {
-    // Remove the class when the dropdown loses focus
-    this.closest(".form-group").classList.remove("dropdown-open");
-  });
-});
+window.onload = populateDropdown;
