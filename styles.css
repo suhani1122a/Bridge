@@ -3,13 +3,13 @@
     --secondary: #FF6B6B; /* Accent color */
 }
 body{
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  /* background: linear-gradient(135deg, #e0f7fa, #ffffff); */
+  background: linear-gradient(135deg, #F2F2F2, #ffffff);
   
 }
 /*hero section*/
 .hero {
-    background: url('images/Backlogo.png') center,
-    linear-gradient(rgba(96, 175, 235, 0.9), rgba(42,92,130,0.9)) ;
+    background: url('images/backlogo.jpg') center;
     height: 85vh;
     background-size: 100% 100%;   
     background-repeat: no-repeat;
@@ -17,7 +17,8 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0;       
+    padding: 0;  
+      
 }
 
 .box {
@@ -249,7 +250,7 @@ body{
   text-align: center;
   overflow: hidden;
   margin-top: 50px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 #how-it-works h2 {
@@ -278,7 +279,7 @@ body{
 }
 
 #how-it-works i {
-  color: #4A90E2; /* A bright, modern blue */
+  color: #04b93b !important;
   margin: 20px;
 }
 
@@ -352,7 +353,7 @@ body{
   align-items: center;
   margin: 100px;
   scroll-margin-top: 80px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   padding: 20px; /* Ensures some space inside the border */
   box-sizing: border-box;
 }
