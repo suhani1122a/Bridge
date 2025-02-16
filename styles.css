@@ -537,7 +537,7 @@ width: 18px;
 /* Testimonials */
 #comments {
   /* border: 2px solid blue; */
-  padding: 40px 20px;
+  margin-bottom: 40px;
 }
 
 #commheading {
@@ -645,7 +645,7 @@ width: 18px;
  #our-founders {
   padding: 60px 0;
   /* border: 2px solid brown; */
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #our-founders h2 {
@@ -663,7 +663,7 @@ width: 18px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 80px; /* Ensures spacing on smaller screens */
+  margin-bottom: 50px; /* Ensures spacing on smaller screens */
   text-align: center;
 }
 
@@ -683,8 +683,9 @@ width: 18px;
 }
 
 @media (max-width: 600px) {
-  #our-founders{
-    margin-bottom: 80px;
+  .founder-card {
+    margin-bottom: 40px;
+    
   }
 }
 
@@ -704,7 +705,7 @@ width: 18px;
  #faq {
   /* border: 2px solid purple; */
   scroll-margin-top: 100px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .faq-section {
