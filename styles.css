@@ -218,7 +218,7 @@ body{
   }
 
   /* Marquee section */
-.marquee {
+ .marquee {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -243,7 +243,29 @@ body{
     100%{
       transform: translateX(-100%);
     }
+  } 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marquee-content img {
+    height: 40px;
   }
+  .marquee-content {
+    gap: 20px;
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-content img {
+    height: 30px;
+  }
+  .marquee-content {
+    gap: 10px;
+    animation-duration: 15s;
+  }
+}
+
 
 /*   How It Works Section */
 #how-it-works {
@@ -345,6 +367,129 @@ body{
     padding: 20px 10px;
   }
 }
+/*compare table*/
+.why-choose {
+  padding: 50px 20px;
+  text-align: center;
+  /* border: 2px solid green; */
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.container h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.container h2 span {
+  font-weight: 700;
+  color: #2A5C82;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 30px;
+}
+
+/* Table Styles */
+.comparison-table {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  width: 100%;
+  min-width: 700px; 
+  border-collapse: collapse;
+}
+
+.table-header,
+.table-row {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 10px; /* Adjust this to increase/decrease column spacing */
+    text-align: center;
+    
+}
+.feature{
+  font-weight: bold;
+  flex: 0.7; /* Makes feature column smaller */
+  min-width: 130px;
+}
+
+.table-header div,
+.table-row div {
+    flex: 1; /* Ensures equal width */
+    padding: 15px;
+    text-align: center;
+    max-width: 350px; /* Prevents long lines */
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.table-header {
+  background: #04b93b;
+  color: white;
+  font-weight: bold;
+}
+
+.table-row {
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+    display: flex;
+    gap: 50px; /* Adds spacing between columns */
+}
+
+.table-row:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.table-row:hover {
+  background: #e0f3ff;
+}
+
+.highlight {
+  font-weight: bold;
+  color: green;
+}
+
+/* Wrapper for scrollable content */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers the table horizontally */
+}
+
+/* Responsive: Ensuring Scroll for Mobile */
+@media (max-width: 768px) {
+  .table-wrapper {
+      overflow-x: auto; /* Enables scroll */
+      display: flex;
+      justify-content: center;
+      scroll-behavior: smooth;
+  }
+  .table-header{
+    font-size: 1.3rem;
+  }
+  .intro {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  .comparison-table {
+      min-width: 700px; 
+  }
+}
+
 /* Registration form */
 .registration {
   font-family: Arial, sans-serif;
