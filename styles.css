@@ -266,20 +266,115 @@ body{
   }
 }
 
+/* custom sections */
+  .custom {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.section-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    width: 80%;
+    padding: 40px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #04b93b;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.section-box:hover {
+    transform: scale(1.02);
+    border-color: #04b93b;
+    box-shadow: 0px 4px 25px rgba(42, 92, 130, 0.3);
+}
+
+/* Content Styling */
+.content {
+    max-width: 50%;
+    padding-right: 20px;
+}
+.heading {
+  font-family: 'Almarai';
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #2A5C82;
+    margin-bottom: 30px;
+    transition: color 0.3s ease-in-out;
+}
+.heading2{
+  font-size: 1rem;
+}
+
+/* Text Hover Effect */
+.section-box:hover .heading {
+    color: #2A5C82;
+}
+
+/* Image Styling */
+.image-container {
+    margin-left: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    height: 45vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.section-box:hover .image-container img {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        width: 90%;
+    }
+    .content {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .image-container {
+        margin-left: 0;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: 35vh;
+    }
+    .heading {
+        font-size: 1.5rem;
+    }
+}
 
 /*   How It Works Section */
 #how-it-works {
   text-align: center;
   overflow: hidden;
-  margin-top: 50px;
+ 
   /* border: 2px solid red; */
 }
 
 #how-it-works h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2A5C82; /* Professional blue */
-  margin-bottom: 40px;
+  color: #2A5C82; 
+  margin-bottom: 50px;
   margin-top: 40px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   transform: translateY(20px);
@@ -323,16 +418,16 @@ body{
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 40px; /* Ensures proper wrapping on smaller screens */
+  gap: 40px;
 }
 
-/* Ensure each column is a flex container so that its child can stretch */
+
 .howitworks-cards > .col-md-4 {
   display: flex;
   align-items: stretch;
 }
 
-/* Force the inner card to fill the available height and arrange content vertically */
+
 .howitworks-cards .col-md-4 > div {
   flex: 1;
   display: flex;
