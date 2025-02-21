@@ -85,7 +85,7 @@ body{
   
   .navbar-brand {
     font-weight: bold;
-    color: #2A5C82 !important; 
+    color: #00b7ff !important; 
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;

@@ -6,7 +6,7 @@ function bookSession(calendlyLink) {
 
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxCKGRQQKnRXQXxTDU8eC0V_2kk6Zo3LqNN41TQO3rufyActmdT2hc0sKHzrgVDe7Y/exec";
+  "https://script.google.com/macros/s/AKfycby-YFfSXW76d-EscHGFqSOf_4mQfgvz9CinMRcheFNTDQIH-asyyLP5btlXIa3vs5Gl0A/exec";
 
 const form = document.forms["contact-form"];
 
