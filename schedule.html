@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Your Session</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h2 {
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .logo {
+        max-width: 100px; /* Adjust the size as needed */
+        display: block;
+        margin: 0 auto 10px;
+      }
+      .calendly-inline-widget {
+        width: 100%;
+        height: 600px;
+        border: none;
+      }
+      #proceed-btn {
+        display: none; /* Initially hidden */
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        text-align: center;
+        width: 100%;
+        max-width: 350px;
+
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      #proceed-btn:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+      }
+      #proceed-btn::after {
+        margin-left: 20px;
+        content: "→";
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 600px) {
+        #proceed-btn {
+          display: none;
+          font-size: 16px;
+          padding: 12px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <img src="images\Kevaat-logo.png" alt="Logo" class="logo">
+      <h2>Schedule Your Preferred Date & Time</h2>
+      <p>Select a time slot below:</p>
+
+      <!-- Calendly Embed -->
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/kevaatindia/schedule-your-meet"
+        style="min-width: 320px; height: 600px"
+      ></div>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+      ></script>
+
+      <!-- Proceed to Payment Button (Hidden Initially) -->
+      <button id="proceed-btn" onclick="window.location.href='payment.html'">
+        Proceed to Payment
+      </button>
+    </div>
+
+    <script>
+      // Show the "Proceed to Payment" button after the user books a Calendly slot
+      window.addEventListener(
+        "message",
+        function (event) {
+          if (event.data.event === "calendly.event_scheduled") {
+            document.getElementById("proceed-btn").style.display = "block";
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

@@ -21,7 +21,7 @@ form.addEventListener("submit", async (e) => {
 
     // Redirect after a very short delay (even if fetch isn’t done yet)
     setTimeout(() => {
-      window.location.href = "thank-you.html";
+      window.location.href = "schedule.html";
     }, 300); // 300ms delay
 
     await response;
@@ -94,6 +94,7 @@ const universities = [
   "Dr. DY Patil University, Navi Mumbai",
   "Galgotias University, Greater Noida",
   "GITAM University, Visakhapatnam",
+  "GL Bajaj Institute of Technology",
   "GNA University, Phagwara",
   "Graphic Era University, Dehradun",
   "International Institute of Information Technology, Hyderabad",
