@@ -1,7 +1,3 @@
-:root {
-    --primary: #2A5C82;  /* Professional blue */
-    --secondary: #FF6B6B; /* Accent color */
-}
 body{
   /* background: linear-gradient(135deg, #e0f7fa, #ffffff); */
   background: linear-gradient(135deg, #F2F2F2, #ffffff);
