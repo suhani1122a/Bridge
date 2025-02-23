@@ -90,7 +90,9 @@ body{
   .navbar-brand img {
     margin-right: 8px;
     border-radius: 5px;
-  }
+      transform: scale(1.65); /* Adjust scale as needed */
+    }
+  
   
   .navbar-brand:hover {
     transform: scale(1.05);
@@ -153,6 +155,16 @@ body{
   .nav-link.call-btn:hover .arrow {
     transform: translateX(5px); /* Move arrow to the right */
   }
+  @media (max-width: 768px) {
+    .navbar-brand {
+      position: relative;
+      left: 18px;
+      margin-bottom: 5px;
+      transform: scale(0.8);  /* Moves it right */
+    }
+  }
+  
+
 
   /* Marquee section */
  .marquee {
