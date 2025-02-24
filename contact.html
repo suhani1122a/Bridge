@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .contact-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .text {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need further information, feel free to reach out to us via email or mobile.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="icon">📧</span>
+                <div class="text">Email: <a href="mailto:contact@kevaat.com">contact@kevaat.com</a></div>
+                 <div class="text"><a href="mailto:kevaatindia@gmail.com">kevaatindia@gmail.com</a></div>
+            </div>
+            <!-- <div class="contact-item">
+                <span class="icon">📞</span>
+                <span class="text">Mobile: <a href="6280609758">+91 6280609758</a></span>
+            </div> -->
+        </div>
+
+        <form name="contactForm" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzbiQxfyb7cEgrkm9tLeRha3Rw5j07-Kp5_X9KRgZynZ-vPb65D8pWzTRpDBk7GqxFU/exec";
+      
+      const form = document.forms["contactForm"];
+      
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+      
+        try {
+          // Send form data to Google Apps Script
+          const response = await fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form),
+          });
+      
+          if (response.ok) {
+            alert("Thank you for contacting us! We will get back to you soon.");
+            form.reset(); // Reset the form after successful submission
+          } else {
+            alert("Something went wrong. Please try again later.");
+          }
+        } catch (error) {
+          console.error("Error!", error.message);
+          alert("An error occurred. Please check your connection and try again.");
+        }
+      });
+   
+    </script>
+</body>
+</html>

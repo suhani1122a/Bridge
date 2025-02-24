@@ -14,9 +14,7 @@
 
         body {
             background: linear-gradient(to right, #eef2f3, #ffffff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
             min-height: 100vh;
             padding: 20px;
         }
@@ -24,6 +22,7 @@
         .container {
             background: #fff;
             padding: 35px;
+            margin: 50px auto;
             max-width: 850px;
             width: 100%;
             border-radius: 15px;
@@ -45,7 +44,7 @@
 
         h2 {
             font-size: 22px;
-            color: #333;
+            color: #0056b3;
             margin-top: 20px;
             font-weight: 500;
         }
@@ -60,32 +59,24 @@
         ul {
             margin-left: 20px;
         }
-
-       
-
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            background: #28a745;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: 0.3s ease-in-out;
-            margin-top: 20px;
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+          }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background: #007bff;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 0 0 12px 12px;
         }
-
-        button:hover {
-            background: #218838;
-        }
-
-        button:disabled {
-            background: #b0b0b0;
-            cursor: not-allowed;
-        }
-
         @media (max-width: 768px) {
             .container {
                 padding: 25px;
@@ -107,6 +98,17 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="containerr">
+          <img
+            src="images\Kevaat_logo.png"
+            alt="Logo"
+            width="100"
+            height="50"
+            class="d-inline-block align-text-top me-2"
+          />
+        </div>
+      </nav>
     <div class="container">
         <h1>Terms & Conditions</h1>
 
@@ -182,6 +184,10 @@
             <li>Users will be notified of major changes via email or platform notifications.</li>
         </ul>
 
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Kevaat. All rights reserved.
     </div>
 
 </body>

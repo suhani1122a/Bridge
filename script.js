@@ -109,7 +109,7 @@ const universities = [
   "Maharishi Markandeshwar University, Mullana",
   "Manipal Academy of Higher Education, Manipal",
   "Manav Rachna International Institute of Research and Studies, Faridabad",
-  "Narsee Monjee Institute of Management Studies, Mumbai",
+  "Narsee Monjee Institute of Management Studies, Chandigarh",
   "NITTE University, Mangalore",
   "Noida International University, Greater Noida",
   "Parul University, Waghodia",

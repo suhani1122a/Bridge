@@ -535,7 +535,7 @@ body{
 }
 
 /* Mentor Grid Section - Aesthetic Enhancements */
-/*
+
 #mentors {
   padding: 60px 0;
   color: white;
@@ -556,10 +556,11 @@ body{
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  background-color: #f0f0f0;
   padding: 60px 0;
   position: relative;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
   width: 100%; 
+  box-shadow: 0 0 50px rgba(42, 92, 130, 0.2); 
 }
 
 .mentors-wrapper {
@@ -577,26 +578,25 @@ display: inline-block;
 .mentor-card {
   display: inline-block;
   margin-right: 20px; 
-  width: 250px; 
-  height: 250px; 
+  width: 280px; 
+  height: 350px; 
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
   padding: 15px;
-  min-width: 200px;
-  max-width: 200px; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .mentor-card:hover {
-  transform: scale(1.1);
+  transform: scale(1);
+  border: 2px solid black;
 }
 .mentor-card img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border-radius: 10%;
   margin-bottom: 10px;
-  border: 3px solid black;
+  border: 3px solid #04b93b;
 }
 
 .mentor-card h3 {
@@ -611,6 +611,9 @@ display: inline-block;
   font-size: 14px;
   margin: 5px 0 0;
   color: black;
+  font-weight: 600;
+  height: 40px; /* Fixed height for the text container */
+  overflow: hidden;
 }
 
 @keyframes marquee {
@@ -621,44 +624,59 @@ display: inline-block;
       transform: translateX(-50%);
   }
 }
-@media (max-width: 1024px) {
-  .mentors-wrapper {
-    animation: marquee 25s linear infinite;
-  }
-}
-
 @media (max-width: 768px) {
-  .mentors-wrapper {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+  #mentors h2 {
+    font-size: 1.8rem; /* Further reduced font size for tablets */
   }
-  .mentors-wrapper:hover {
-    animation-play-state:running;
-  } 
-  
+
   .mentor-card {
-    width: 180px;
-    padding: 10px;
+    width: 200px; /* Adjusted width for tablets */
+    height: 280px; /* Adjusted height for tablets */
+    margin-right: 10px; /* Further reduced margin for tablets */
   }
-  .mentor-card:hover {
-    transform: none
+
+  .mentor-card img {
+    height: 150px; /* Adjusted image size for tablets */
+    width: 150px; /* Adjusted image size for tablets */
+  }
+
+  .mentor-card h3 {
+    font-size: 16px; /* Further reduced font size for tablets */
+  }
+
+  .mentor-card p {
+    font-size: 12px; /* Further reduced font size for tablets */
   }
 }
 
 @media (max-width: 480px) {
-  .mentors-container {
-    padding: 40px 0;
-  }
-  
-  .mentor-card {
-    width: 150px;
-  }
-  
   #mentors h2 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Further reduced font size for mobile */
+  }
+
+  .mentors-container {
+    padding: 20px 0; /* Further reduced padding for mobile */
+  }
+
+  .mentor-card {
+    width: 150px; /* Adjusted width for mobile */
+    height: 220px; /* Adjusted height for mobile */
+    margin-right: 8px; /* Further reduced margin for mobile */
+  }
+
+  .mentor-card img {
+    height: 100px; /* Adjusted image size for mobile */
+    width: 100px; /* Adjusted image size for mobile */
+  }
+
+  .mentor-card h3 {
+    font-size: 14px; /* Further reduced font size for mobile */
+  }
+
+  .mentor-card p {
+    font-size: 11px; /* Further reduced font size for mobile */
   }
 }
-*/
 
 /* Registration form */
 .registration {
